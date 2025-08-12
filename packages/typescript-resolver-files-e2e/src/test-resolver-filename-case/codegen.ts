@@ -6,15 +6,15 @@ const config: CodegenConfig = {
     afterAllFileWrite: ['prettier --write'],
   },
   generates: {
-    'packages/typescript-resolver-files-e2e/src/test-filename-case-kebab/schema':
+    'packages/typescript-resolver-files-e2e/src/test-resolver-filename-case/graphql/schemas':
       defineConfig(
         {
           fileOutputCasing: 'kebab-case',
         },
         {
           schema: [
-            'packages/typescript-resolver-files-e2e/src/test-filename-case-kebab/**/*.graphqls',
-            'packages/typescript-resolver-files-e2e/src/test-filename-case-kebab/**/*.graphqls.ts',
+            'packages/typescript-resolver-files-e2e/src/test-resolver-filename-case/graphql/schemas/**/*.graphqls',
+            'packages/typescript-resolver-files-e2e/src/test-resolver-filename-case/graphql/schemas/**/*.graphqls.ts',
           ],
         }
       ),

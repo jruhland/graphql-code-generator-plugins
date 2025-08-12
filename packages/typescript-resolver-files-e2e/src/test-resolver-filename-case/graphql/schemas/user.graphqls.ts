@@ -2,16 +2,16 @@ import gql from 'graphql-tag';
 
 export const userTypeDefs = gql`
   extend type Query {
+  # Multi-word type: UserProfile -> user-profile.ts
     userProfile(id: ID!): UserProfile!
-    user(id: ID!): UserPayload!
+  # Single-word type: User -> user.ts
+    user(id: ID!): User!
   }
 
-  # Single-word type: User -> user.ts
   type User {
     id: ID!
   }
 
-  # Multi-word type: UserProfile -> user-profile.ts
   type UserProfile {
     id: ID!
   }

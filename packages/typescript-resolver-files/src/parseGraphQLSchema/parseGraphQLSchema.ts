@@ -49,6 +49,7 @@ interface ParseGraphQLSchemaParams {
 export interface ResolverDetails {
   schemaType: string;
   moduleName: string;
+  originalResolverName: string;
   resolverFile: {
     name: string;
     path: string;
@@ -514,6 +515,7 @@ const createResolverDetails = ({
   return {
     schemaType,
     moduleName,
+    originalResolverName: resolverName,
     resolverFile: {
       name: transformedFileName,
       path: resolverFilePath,
